@@ -1,1 +1,1 @@
-sampoon/openwrt
+sampoon/openwrt:2023_08_26
