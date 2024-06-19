@@ -1,2 +1,2 @@
 sampoon/openwrt:2023_08_26
-gethomepage/homepage:latest
+ghcr.io/gethomepage/homepage
