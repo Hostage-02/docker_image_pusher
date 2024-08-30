@@ -1,4 +1,1 @@
-6053537/portainer-ce:latest
-sampoon/openwrt:2023_08_26
-ghcr.io/gethomepage/homepage
-mccloud/subgen
+mccloud/subgen:
