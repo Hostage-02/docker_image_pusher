@@ -1,1 +1,1 @@
-mccloud/subgen:
+mccloud/subgen:cpu
