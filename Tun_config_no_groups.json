@@ -122,25 +122,7 @@
       "tag": "block"
     },
     {
-      "tag": "甲骨文3",
-      "type": "vless",
-      "server": "ku.564672.xyz",
-      "server_port": 34867,
-      "uuid": "842e3e53-221a-4d94-9715-385973033339",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "box.gobattery.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "FUs31Sxxbq4E2FtpF52zBO1i40L6Ltv_aEQO939knCM",
-          "short_id": "da4f6f99"
+      
         }
       }
     }
