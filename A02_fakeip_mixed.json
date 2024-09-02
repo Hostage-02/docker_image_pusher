@@ -69,28 +69,21 @@
   
   "outbounds": [
     { "tag": "proxy", "type": "selector", "outbounds": [ "auto", "direct", "{all}"] },
+    { "tag": "auto", "type": "urltest", "outbounds": [ "{all}" ], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "direct", "type": "direct" },
-    { "tag": "dns-out", "type": "dns" }
+    { "tag": "dns-out", "type": "dns" },
+    { "tag": "block", "type": "block" }
   ],
   
   "route": {
         "auto_detect_interface": true,
-        "final": "🐟 漏网之鱼",
+        "final": "direct",
     "rules": [
       { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
-      { "clash_mode": "direct", "outbound": "🎯 全球直连" },
-      { "clash_mode": "global", "outbound": "GLOBAL" },
-      { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
-      { "ip_is_private": true, "outbound": "🎯 全球直连" },
-      { "rule_set": "geosite-openai", "outbound": "🤖 OpenAI" },
-      { "rule_set": "geosite-youtube", "outbound": "📹 YouTube" },
-      { "rule_set": ["geoip-google", "geosite-google"], "outbound": "🍀 Google" },
-      { "rule_set": ["geoip-telegram", "geosite-telegram"], "outbound": "📲 Telegram" },
-      { "rule_set": "geosite-tiktok", "outbound": "🎵 TikTok" },
-      { "rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "🎥 Netflix" },
-      { "rule_set": "geosite-microsoft", "outbound": "direct" },      
-      { "rule_set": "geosite-geolocation-!cn", "outbound": "🚀 节点选择" },
-      { "rule_set": ["geoip-cn", "geosite-cn"], "outbound": "direct" }
+      { "ip_is_private": true, "outbound": "direct" },
+      { "rule_set": "outbound": "direct" },      
+      { "rule_set": , "outbound": "🚀 节点选择" },
+      { "rule_set": ["geosite-openai", "geosite-youtube", "geoip-google", "geosite-google", "geoip-telegram", "geosite-telegram", "geosite-tiktok", "geoip-netflix", "geosite-netflix", "geoip-cn", "geosite-cn", "geosite-geolocation-!cn", "geosite-microsoft", ], "outbound": "direct" }
     ],
     
     "rule_set": [
