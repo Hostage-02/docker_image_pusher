@@ -9,14 +9,14 @@
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "🎯 全球直连",
+      "external_ui_download_detour": "direct",
       "default_mode": "rule"
       }
     },
   "dns": {
     "servers": [
       {"tag": "proxyDns", "address": "tls://8.8.8.8", "address_resolver": "localDns", "address_strategy": "prefer_ipv4", "detour": "🚀 节点选择"},
-      {"tag": "localDns", "address": "223.5.5.5", "detour": "🎯 全球直连"},
+      {"tag": "localDns", "address": "223.5.5.5", "detour": "direct"},
       {"tag": "fakeip", "address": "fakeip"},
       {"tag": "block", "address": "rcode://success"}
     ],
@@ -81,8 +81,6 @@
     "rules": [
       { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
       { "ip_is_private": true, "outbound": "direct" },
-      { "rule_set": "outbound": "direct" },      
-      { "rule_set": , "outbound": "🚀 节点选择" },
       { "rule_set": ["geosite-openai", "geosite-youtube", "geoip-google", "geosite-google", "geoip-telegram", "geosite-telegram", "geosite-tiktok", "geoip-netflix", "geosite-netflix", "geoip-cn", "geosite-cn", "geosite-geolocation-!cn", "geosite-microsoft", ], "outbound": "direct" }
     ],
     
