@@ -79,7 +79,7 @@
     "rules": [
       { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "outbound": "dns-out" },
       { "ip_is_private": true, "outbound": "direct" },
-      { "rule_set": ["geosite-openai", "geosite-youtube", "geoip-google", "geosite-google", "geoip-telegram", "geosite-telegram", "geosite-tiktok", "geoip-netflix", "geosite-netflix", "geoip-cn", "geosite-cn", "geosite-geolocation-!cn", "geosite-microsoft", ], "outbound": "direct" }
+      { "rule_set": ["geosite-openai", "geosite-youtube", "geoip-google", "geosite-google", "geoip-telegram", "geosite-telegram", "geosite-tiktok", "geoip-netflix", "geosite-netflix", "geoip-cn", "geosite-cn", "geosite-geolocation-!cn", "geosite-microsoft" ], "outbound": "direct" }
     ],
     
     "rule_set": [
